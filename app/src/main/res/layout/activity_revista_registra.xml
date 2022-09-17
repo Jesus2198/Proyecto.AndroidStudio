@@ -18,6 +18,70 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/lblRegRevistaNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:layout_margin="5dp"
+                android:padding="5dp"/>
+            <EditText
+                android:id="@+id/txtRegRevistaNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"/>
+
+            <TextView
+                android:id="@+id/lblRegRevistaFrecuencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Frecuencia"
+                android:layout_margin="5dp"
+                android:padding="5dp"/>
+            <EditText
+                android:id="@+id/txtRegRevistaFrecuencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"/>
+
+            <TextView
+                android:id="@+id/lblRegRevistaFechaCre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha Creacion"
+                android:layout_margin="5dp"
+                android:padding="5dp"/>
+            <EditText
+                android:id="@+id/txtRegRevistaFechaCre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"/>
+
+            <TextView
+                android:id="@+id/lblRegRevistaFechaReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha Registro"
+                android:layout_margin="5dp"
+                android:padding="5dp"/>
+            <EditText
+                android:id="@+id/txtRegRevistaFechaReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"/>
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
