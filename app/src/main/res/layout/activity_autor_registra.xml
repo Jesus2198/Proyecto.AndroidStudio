@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:padding="10dp"
-        android:text="@string/txt_registro_de_autor"
+        android:text="Registro de Autor"
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -29,10 +29,10 @@
             android:orientation="vertical">
 
         <TextView
-            android:id="@+id/lblRegEditorialNombres"
+            android:id="@+id/lblRegAutorNombres"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nombres"
+            android:text="Nombres:"
             android:layout_margin="5dp"
             android:padding="5dp"
             />
@@ -40,7 +40,7 @@
 
         <EditText
 
-            android:id="@+id/txtRegEditorialNombres"
+            android:id="@+id/txtRegAutorNombres"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -48,21 +48,109 @@
             />
 
             <TextView
-                android:id="@+id/lblRegEditorialApellidos"
+                android:id="@+id/lblRegAutorApellidos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Apellidos"
+                android:text="Apellidos:"
                 android:layout_margin="5dp"
                 android:padding="5dp"
                 />
             <EditText
 
-                android:id="@+id/txtRegEditorialNombres"
+                android:id="@+id/txtRegAutorApellidos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:padding="5dp"
                 />
+
+            <TextView
+                android:id="@+id/lblRegAutorfechaNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha nacimiento:"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                />
+            <EditText
+
+                android:id="@+id/txtRegAutorfechaNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                />
+
+
+            <TextView
+                android:id="@+id/lblRegAutortelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telefono:"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                />
+            <EditText
+
+                android:id="@+id/txtRegAutortelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                />
+
+            <TextView
+                android:id="@+id/lblRegAutorEstado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Estado:"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                />
+            <EditText
+
+                android:id="@+id/txtRegAutorEstado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                />
+
+
+
+
+
+
+            //Spinner
+            <TextView
+                android:id="@+id/txtRegAutorGrado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:text="Grado:" />
+            <Spinner
+                android:id="@+id/spnRegAutor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:minHeight="48dp"
+                android:entries="@array/txt_Reg_d_Autor"
+                />
+
+
+            <Button
+                android:id="@+id/btnRegAutor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:text="Registrar" />
+
+
+
+
 
 
 
