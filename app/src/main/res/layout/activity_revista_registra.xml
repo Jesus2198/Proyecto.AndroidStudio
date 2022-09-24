@@ -95,6 +95,28 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:padding="5dp"/>
+
+            <TextView
+                android:id="@+id/lblRegRevistaModalidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modalidad"
+                android:layout_margin="5dp"
+                android:padding="5dp"/>
+            <Spinner
+                android:id="@+id/spnRegRevistaModalidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                />
+
+            <Button
+                android:id="@+id/btnRegistrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:text="Registrar"/>
         </LinearLayout>
     </ScrollView>
 
