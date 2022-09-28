@@ -1,6 +1,7 @@
 package com.cibertec.movil_modelo_proyecto_2022_2;
 
 import android.os.Bundle;
+import android.widget.Spinner;
 
 import com.cibertec.movil_modelo_proyecto_2022_2.util.NewAppCompatActivity;
 

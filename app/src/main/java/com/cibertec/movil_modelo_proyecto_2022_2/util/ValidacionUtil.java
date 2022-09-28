@@ -22,4 +22,6 @@ public class ValidacionUtil {
     public static final String EDAD = "\\d{2}";
     public static final String SEXO = "[FM]";
 
+    public static  final String TELEFONO="[0-9]{9}";
+
 }
