@@ -25,6 +25,6 @@ public class ValidacionUtil {
 
     public static  final String TELEFONO="[0-9]{9}";
     public static  final String FIJO="[0-9]{7}";
-
+    public static final String ANIO = "[0-9]{4}";
 
 }
