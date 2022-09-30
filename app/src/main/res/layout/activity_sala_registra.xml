@@ -8,6 +8,7 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/idTitlePage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -16,6 +17,125 @@
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold" />
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lblRegSalaNumero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Numero :"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            />
+
+        <EditText
+            android:id="@+id/txtRegSalaNumero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            />
+
+        <TextView
+            android:id="@+id/lblRegSalaPiso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Piso :"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            />
+
+        <EditText
+            android:id="@+id/txtRegSalaPiso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            />
+
+        <TextView
+            android:id="@+id/lblRegSalaNumAlumnos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Numero de Alumnos :"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            />
+
+        <EditText
+            android:id="@+id/txtRegSalaNumAlumnos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            />
+
+        <TextView
+            android:id="@+id/lblRegSalaRecursos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recursos :"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            />
+
+        <EditText
+            android:id="@+id/txtRegSalaRecursos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            />
+
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sede :"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            />
+
+        <Spinner
+            android:id="@+id/spnRegSede"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="4dp"
+            android:minHeight="48dp"
+            />
+
+        <Button
+            android:id="@+id/btnRegSalaEnviar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:text="Registrar" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+</ScrollView>
+
+
+
 
 
 

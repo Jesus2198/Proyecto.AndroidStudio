@@ -24,4 +24,13 @@ public class ValidacionUtil {
 
     public static  final String TELEFONO="[0-9]{9}";
 
+
+    public static  final String NUMERO = "[a-zA-ZáéíóúñüÁÉÍÓÚÑÜ\\s0-9]{3,30}";
+    public static  final String PISO = "\\d+";
+    public static  final String NUMALUMNOS = "\\d+";
+    public static  final String RECURSOS = "[a-zA-ZáéíóúñüÁÉÍÓÚÑÜ\\s]{3,30}";
+    public static  final String FECHAREGISTRO = "((19|20)\\d\\d)-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])";
+    public static  final String ESTADO = "[0-9]{1}";
+
+
 }
