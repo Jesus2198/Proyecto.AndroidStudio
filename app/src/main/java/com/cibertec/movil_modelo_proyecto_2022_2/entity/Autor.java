@@ -10,7 +10,7 @@ public class Autor {
     private String fechaNacimiento;
     private String telefono;
     private String fechaRegistro;
-    private String estado;
+    private int estado;
     private Grado grado;
 
     public Grado getGrado() {
@@ -71,13 +71,11 @@ public class Autor {
         this.fechaRegistro = fechaRegistro;
     }
 
-    public String getEstado() {
+    public int getEstado() {
         return estado;
     }
 
-    public void setEstado(String estado) {
+    public void setEstado(int estado) {
         this.estado = estado;
     }
-
-
 }

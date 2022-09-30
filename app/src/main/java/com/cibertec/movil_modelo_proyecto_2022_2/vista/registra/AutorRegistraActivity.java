@@ -72,6 +72,7 @@ public class AutorRegistraActivity extends NewAppCompatActivity {
                 String fechNac=txtFechaNac.getText().toString();
                 String telefono=txtTelefono.getText().toString();
 
+
                 int indgrado =spnGrado.getSelectedItemPosition();
                 btnRegistrar=findViewById(R.id.btnRegAutor);
 
@@ -96,6 +97,7 @@ public class AutorRegistraActivity extends NewAppCompatActivity {
                     objAutor.setApellidos(apell);
                     objAutor.setFechaNacimiento(fechNac);
                     objAutor.setTelefono(telefono);
+                    objAutor.setEstado(1);
                     objAutor.setFechaRegistro(FunctionUtil.getFechaActualStringDateTime());
                     objAutor.setGrado(objGrado);
 

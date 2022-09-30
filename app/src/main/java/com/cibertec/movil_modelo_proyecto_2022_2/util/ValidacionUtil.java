@@ -4,6 +4,7 @@ public class ValidacionUtil {
 
     public static final String TEXTO = "[a-zA-ZáéíóúñüÁÉÍÓÚÑÜ\\s]{2,20}";
     public static final String DNI = "[0-9]{8}";
+    public static final String RUC = "[0-9]{11}";
     public static final String NUM_HIJOS = "[0-9]|[1][0]";
     public static final String SUELDO = "(\\d+)|(\\d+[.]\\d{1,2})";
     public static final String PLACA = "[A-Z]{2}\\d{4}";
@@ -23,6 +24,8 @@ public class ValidacionUtil {
     public static final String SEXO = "[FM]";
 
     public static  final String TELEFONO="[0-9]{9}";
+    public static  final String FIJO="[0-9]{7}";
+    public static final String ANIO = "[0-9]{4}";
 
 
     public static  final String NUMERO = "[a-zA-ZáéíóúñüÁÉÍÓÚÑÜ\\s0-9]{3,30}";
