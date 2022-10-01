@@ -7,6 +7,6 @@ import retrofit2.http.Body;
 import retrofit2.http.POST;
 
 public interface ServiceAlumno {
-    @POST("autor")
+    @POST("alumno")
     public Call<Alumno> insertaAlumno(@Body Alumno obj);
 }
