@@ -7,15 +7,36 @@
     tools:context=".vista.consulta.AutorConsultaActivity"
     android:orientation="vertical">
 
-    <TextView
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:padding="10dp"
-        android:text="@string/txt_consulta_de_autor"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="4dp"
+            android:text="Consulta Autor"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filtrar"
+            android:id="@+id/idConsAutorFiltrar"
+            android:layout_margin="5dp"
+            android:padding="4dp"/>
+        <ListView
+            android:id="@+id/idConsAutorListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:padding="4dp"
+            android:divider="@color/black"
+            android:dividerHeight="1dp"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 
 

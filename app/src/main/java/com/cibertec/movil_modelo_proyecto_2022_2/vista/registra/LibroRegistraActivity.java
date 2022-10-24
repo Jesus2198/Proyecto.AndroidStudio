@@ -68,7 +68,7 @@ public class LibroRegistraActivity extends NewAppCompatActivity {
                 String ani=txtAnLibro.getText().toString();
                 String ser=txtSerie.getText().toString();
 
-                int indcategoria =spnCategLibro.getSelectedItemPosition();
+
                 btnRegLibro=findViewById(R.id.btnRegLibro);
 
                 if (!tit.matches(ValidacionUtil.TEXTO)){

@@ -3,6 +3,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
+    android:weightSum="9"
     >
+    <ImageView
+        android:id="@+id/idAutorItemImagen"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"/>
 
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:orientation="vertical"
+        android:weightSum="2"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="9"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/idAutorItemId"
+                android:layout_width="26dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/idAutorItemNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:layout_weight="0"
+                android:text="Nombres" />
+
+            <TextView
+                android:id="@+id/idAutorApellido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Apellido" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/idConsultaItemGrado"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Grado"/>
+
+
+    </LinearLayout>
 </LinearLayout>

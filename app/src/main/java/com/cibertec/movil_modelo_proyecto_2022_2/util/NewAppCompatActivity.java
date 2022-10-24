@@ -143,6 +143,13 @@ public class NewAppCompatActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
+
+        if (id == R.id.idMenuConsultaAutor){
+            Intent intent = new Intent(this, AutorConsultaActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
         if (id == R.id.idMenuConsultaEditorial){
             Intent intent = new Intent(this, EditorialConsultaActivity.class);
             startActivity(intent);
