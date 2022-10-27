@@ -9,6 +9,9 @@ public class Proveedor {
     private String telefono;
     private String celular;
     private String contacto;
+    private int estado;
+    private String fechaRegistro;
+    private Pais pais;
 
     public int getIdProveedor() {
         return idProveedor;
@@ -90,8 +93,6 @@ public class Proveedor {
         this.pais = pais;
     }
 
-    private int estado;
-    private String fechaRegistro;
-    private Pais pais;
+
 
 }
