@@ -5,27 +5,60 @@
     android:orientation="horizontal"
     android:weightSum="9"
     >
+    <ImageView
+        android:id="@+id/idLibroItemImagen"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"/>
 
-    <TextView
-
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:id="@+id/idLibroItemId"
-        android:text="1"/>
+        android:layout_weight="6"
+        android:orientation="vertical"
+        android:weightSum="2"
+        >
 
-    <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="9"
+            android:orientation="horizontal"
+            >
 
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="8"
-        android:id="@+id/idLibroItemRazSoc"
-        android:text="Lumbreras"/>
+            <TextView
+                android:id="@+id/idLibroItemId"
+                android:layout_width="26dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/idLibroItemTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:layout_weight="0"
+                android:text="Titulos" />
+
+            <TextView
+                android:id="@+id/idLibroSerie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Serie" />
 
 
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/idConsultaItemCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Categoria"/>
 
 
-
-
-
+    </LinearLayout>
 </LinearLayout>
