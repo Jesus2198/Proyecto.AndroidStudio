@@ -53,7 +53,7 @@ public class ProveedorAdapter extends ArrayAdapter<Proveedor>  {
 
 
         TextView  txtPais = row.findViewById(R.id.idConsultaItemPais);
-        txtPais.setText(String.valueOf(objProveedor.getPais().getIso()));
+        txtPais.setText(String.valueOf(objProveedor.getRuc()));
 
         new Thread(new Runnable() {
             @Override
