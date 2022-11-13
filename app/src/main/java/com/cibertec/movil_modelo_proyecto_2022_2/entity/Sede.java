@@ -1,6 +1,8 @@
 package com.cibertec.movil_modelo_proyecto_2022_2.entity;
 
-public class Sede {
+import java.io.Serializable;
+
+public class Sede implements Serializable {
     private int idSede;
     private String nombre;
 

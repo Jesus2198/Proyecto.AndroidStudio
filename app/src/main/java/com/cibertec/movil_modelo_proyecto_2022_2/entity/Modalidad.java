@@ -1,6 +1,8 @@
 package com.cibertec.movil_modelo_proyecto_2022_2.entity;
 
-public class Modalidad {
+import java.io.Serializable;
+
+public class Modalidad implements Serializable {
 
     private int idModalidad;
     private String  descripcion;
