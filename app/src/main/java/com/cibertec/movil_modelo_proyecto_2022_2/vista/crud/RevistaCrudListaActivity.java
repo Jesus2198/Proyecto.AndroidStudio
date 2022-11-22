@@ -29,7 +29,7 @@ public class RevistaCrudListaActivity extends NewAppCompatActivity {
     ListView lstRevista;
     ArrayList<Revista> data = new ArrayList<Revista>();
     RevistaAdapter adaptador;
-    Button btnFiltrar, btnRegistrar;
+    Button btnFiltrar, btnRegistrar, btnEliminar;
     EditText txtFiltro;
 
     ServiceRevista serviceRevista;
@@ -42,6 +42,7 @@ public class RevistaCrudListaActivity extends NewAppCompatActivity {
         txtFiltro = findViewById(R.id.idCrudRevistaTxtFiltrar);
         btnFiltrar = findViewById(R.id.idCrudRevistaBtnFiltrar);
         btnRegistrar = findViewById(R.id.idCrudRevistaBtnRegistrar);
+        btnEliminar = findViewById(R.id.idCrudRevistaFrmEliminar);
 
         lstRevista = findViewById(R.id.idCrudRevistaListView);
         adaptador = new RevistaAdapter(this, R.layout.activity_revista_crud_item, data);
