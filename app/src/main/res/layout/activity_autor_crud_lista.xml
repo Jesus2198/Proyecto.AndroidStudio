@@ -18,6 +18,38 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idCrudAutorTxtFiltrar"
+        android:layout_margin="5dp"
+        android:padding="4dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filtrar"
+        android:id="@+id/idCrudAutorBtnFiltrar"
+        android:layout_margin="5dp"
+        android:padding="4dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        android:id="@+id/idCrudAutorBtnRegistrar"
+        android:layout_margin="5dp"
+        android:padding="4dp"/>
+
+    <ListView
+        android:id="@+id/idCrudAutorListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:padding="4dp"
+
+        />
+
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
