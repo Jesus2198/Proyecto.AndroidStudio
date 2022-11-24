@@ -47,7 +47,6 @@ public class SalaRegistraActivity extends NewAppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sala_registra);
-
         txtNum = findViewById(R.id.txtRegSalaNumero);
         txtPiso = findViewById(R.id.txtRegSalaPiso);
         txtNumAlum = findViewById(R.id.txtRegSalaNumAlumnos);
@@ -90,8 +89,8 @@ public class SalaRegistraActivity extends NewAppCompatActivity {
 
                     Sala objSala = new Sala();
                     objSala.setNumero(num);
-                    objSala.setPiso(Integer.parseInt(piso));
-                    objSala.setNumAlumnos(Integer.parseInt(numalum));
+                    objSala.setPiso(piso);
+                    objSala.setNumAlumnos(numalum);
                     objSala.setRecursos(rec);
                     objSala.setFechaRegistro(FunctionUtil.getFechaActualStringDateTime());
                     objSala.setEstado(1);
@@ -147,13 +146,13 @@ public class SalaRegistraActivity extends NewAppCompatActivity {
                     }
                     adaptador.notifyDataSetChanged();
                 }else{
-                    mensajeToast("Error al acceder al Servicio Rest >>> ");
+                    mensajeToastLong("Error al acceder al Servicio Rest >>> ");
                 }
             }
 
             @Override
             public void onFailure(Call<List<Sede>> call, Throwable t) {
-                mensajeToast("Error al acceder al Servicio Rest >>> " + t.getMessage());
+                mensajeToastLong("Error al acceder al Servicio Rest >>> " + t.getMessage());
             }
         });
     }

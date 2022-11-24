@@ -1,13 +1,14 @@
 package com.cibertec.movil_modelo_proyecto_2022_2.entity;
 
+
 import java.io.Serializable;
 
 public class Sala implements Serializable {
 
     private int idSala;
     private String numero;
-    private int piso;
-    private int numAlumnos;
+    private String piso;
+    private String numAlumnos;
     private String recursos;
     private String fechaRegistro;
     private int estado;
@@ -30,19 +31,19 @@ public class Sala implements Serializable {
         this.numero = numero;
     }
 
-    public int getPiso() {
+    public String getPiso() {
         return piso;
     }
 
-    public void setPiso(int piso) {
+    public void setPiso(String piso) {
         this.piso = piso;
     }
 
-    public int getNumAlumnos() {
+    public String getNumAlumnos() {
         return numAlumnos;
     }
 
-    public void setNumAlumnos(int numAlumnos) {
+    public void setNumAlumnos(String numAlumnos) {
         this.numAlumnos = numAlumnos;
     }
 

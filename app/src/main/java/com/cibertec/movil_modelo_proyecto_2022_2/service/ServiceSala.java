@@ -6,8 +6,11 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
+import retrofit2.http.Path;
 
 public interface ServiceSala {
 
@@ -16,4 +19,13 @@ public interface ServiceSala {
 
     @GET("sala")
     public Call<List<Sala>> listaSala();
+
+    @PUT("sala")
+    public Call<Sala> actualizaSala(@Body Sala obj);
+
+    @DELETE("sala/{id}")
+    public Call<Sala> eliminaSala(@Path("id") int idSala);
+
+    @GET("sala/porNumero/{numero}")
+    public Call<List<Sala>> listaSalaPorNumero(@Path("numero")String numero);
 }
