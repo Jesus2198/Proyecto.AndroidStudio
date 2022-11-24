@@ -27,12 +27,12 @@
         />
 
     <Button
+        android:id="@+id/idCrudRevistaBtnFiltrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Filtrar"
-        android:id="@+id/idCrudRevistaBtnFiltrar"
         android:layout_margin="5dp"
-        android:padding="4dp"/>
+        android:padding="4dp"
+        android:text="Filtrar"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,9 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="5dp"
-        android:padding="4dp"
-        android:divider="@color/black"
-        android:dividerHeight="1dp"
+        android:padding="2dp"
         />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

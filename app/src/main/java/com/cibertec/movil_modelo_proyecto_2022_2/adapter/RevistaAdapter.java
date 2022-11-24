@@ -3,6 +3,7 @@ package com.cibertec.movil_modelo_proyecto_2022_2.adapter;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,30 +47,10 @@ public class RevistaAdapter extends ArrayAdapter<Revista>  {
         TextView txtReviNombre = row.findViewById(R.id.idConsultaRevItemNombre);
         txtReviNombre.setText(objRevista.getNombre());
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    String ruta ;
-                    if (objRevista.getIdRevista() == 1){
-                        ruta = "https://i.postimg.cc/WbcDv1Bk/gente.jpg";
-                    }else if (objRevista.getIdRevista() == 2){
-                        ruta = "https://i.postimg.cc/SQMX3Mv4/caretas.jpg";
-                    }else if (objRevista.getIdRevista() == 3){
-                        ruta = "https://i.postimg.cc/0NYsWC9B/etiquetanegra.jpg";
-                    }else{
-                        ruta = "https://i.postimg.cc/SRvF2TGJ/no-disponible.png";
-                    }
-                    URL rutaImagen  = new URL(ruta);
-                    InputStream is = new BufferedInputStream(rutaImagen.openStream());
-                    Bitmap b = BitmapFactory.decodeStream(is);
-                    ImageView vista = row.findViewById(R.id.idConsultaRevImagen);
-                    vista.setImageBitmap(b);
-                }catch (Exception e){
-                    e.printStackTrace();
-                }
-            }
-        }).start();
+        if (position%2 ==0){
+            txtReviNombre.setBackgroundColor(Color.rgb(204, 255, 204));
+            txtID.setBackgroundColor(Color.rgb(204, 255, 204));
+        }
 
         return row;
     }

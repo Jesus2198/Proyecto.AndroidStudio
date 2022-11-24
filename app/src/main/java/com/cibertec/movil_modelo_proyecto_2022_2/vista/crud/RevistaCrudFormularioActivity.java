@@ -1,16 +1,17 @@
 package com.cibertec.movil_modelo_proyecto_2022_2.vista.crud;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.cibertec.movil_modelo_proyecto_2022_2.R;
-import com.cibertec.movil_modelo_proyecto_2022_2.entity.Editorial;
 import com.cibertec.movil_modelo_proyecto_2022_2.entity.Modalidad;
 import com.cibertec.movil_modelo_proyecto_2022_2.entity.Revista;
 import com.cibertec.movil_modelo_proyecto_2022_2.service.ServiceModalidad;
@@ -20,6 +21,9 @@ import com.cibertec.movil_modelo_proyecto_2022_2.util.FunctionUtil;
 import com.cibertec.movil_modelo_proyecto_2022_2.util.NewAppCompatActivity;
 import com.cibertec.movil_modelo_proyecto_2022_2.util.ValidacionUtil;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +41,7 @@ public class RevistaCrudFormularioActivity extends NewAppCompatActivity {
     ServiceModalidad serviceModalidad;
 
     EditText txtRevistaNombre, txtRevistaFrecuencia, txtRevistaFechaCre;
-    Button btnRegistrar, btnRegresar;
+    Button btnRegistrar, btnEliminar, btnRegresar;
     TextView txtTitulo;
 
     @Override
@@ -49,6 +53,7 @@ public class RevistaCrudFormularioActivity extends NewAppCompatActivity {
         txtRevistaFrecuencia = findViewById(R.id.txtCrudRevistaFrmFrecuencia);
         txtRevistaFechaCre = findViewById(R.id.txtCrudRevistaFrmFechaCre);
         btnRegistrar = findViewById(R.id.idCrudRevistaFrmEnviar);
+        btnEliminar = findViewById(R.id.idCrudRevistaFrmEliminar);
         btnRegresar = findViewById(R.id.idCrudRevistaFrmRegresar);
 
         serviceModalidad = ConnectionRest.getConnection().create(ServiceModalidad.class);
@@ -58,11 +63,36 @@ public class RevistaCrudFormularioActivity extends NewAppCompatActivity {
         spnModalidad = findViewById(R.id.idCrudRevistaFrmModalidad);
         spnModalidad.setAdapter(adaptador);
 
+        txtRevistaFechaCre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Calendar myCalendar= Calendar.getInstance();
+                new DatePickerDialog(
+                        RevistaCrudFormularioActivity.this,
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker datePicker, int year, int month , int day) {
+                                SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd", new Locale("es"));
+                                myCalendar.set(Calendar.YEAR, year);
+                                myCalendar.set(Calendar.MONTH,month);
+                                myCalendar.set(Calendar.DAY_OF_MONTH,day);
+                                txtRevistaFechaCre.setText(dateFormat.format(myCalendar.getTime()));
+                            }
+                            },
+                        myCalendar.get(Calendar.YEAR),
+                        myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
+
+        cargaModalidad();
+
         Bundle extras = getIntent().getExtras();
         String tipo = extras.getString("var_tipo");
         if (tipo.equals("REGISTRAR")){
             txtTitulo.setText("Mantenimiento Revista - REGISTRA");
             btnRegistrar.setText("REGISTRA");
+            btnEliminar.setEnabled(false);
         }else  if (tipo.equals("ACTUALIZAR")){
             txtTitulo.setText("Mantenimiento Revista - ACTUALIZA");
             btnRegistrar.setText("ACTUALIZA");
@@ -72,8 +102,6 @@ public class RevistaCrudFormularioActivity extends NewAppCompatActivity {
             txtRevistaFrecuencia.setText(objRevista.getFrecuencia());
             txtRevistaFechaCre.setText(objRevista.getFechaCreacion());
         }
-
-        cargaModalidad();
 
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,6 +151,14 @@ public class RevistaCrudFormularioActivity extends NewAppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(RevistaCrudFormularioActivity.this, RevistaCrudListaActivity.class);
                 startActivity(intent);
+            }
+        });
+        btnEliminar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Revista objEditorial = (Revista) extras.get("var_item");
+                elimina(objEditorial.getIdRevista());
+
             }
         });
     }
@@ -203,6 +239,28 @@ public class RevistaCrudFormularioActivity extends NewAppCompatActivity {
             @Override
             public void onFailure(Call<Revista> call, Throwable t) {
                 mensajeToastLong("Error al accede al Servicio Rest >>> " + t.getMessage());
+            }
+        });
+    }
+    public void elimina(int id) {
+        Call<Revista> call = serviceRevista.eliminaRevista(id);
+        call.enqueue(new Callback<Revista>() {
+            @Override
+            public void onResponse(Call<Revista> call, Response<Revista> response) {
+                if (response.isSuccessful()) {
+                    Revista objSalida = response.body();
+                    if (objSalida == null){
+                        mensajeToastLong("ERROR -> NO se eliminó");
+                    }else{
+                        mensajeToastLong("ÉXITO -> Se eliminó correctamente : " + objSalida.getIdRevista());
+                    }
+                }else{
+                    mensajeToastLong("ERROR -> Error en la respuesta");
+                }
+            }
+            @Override
+            public void onFailure(Call<Revista> call, Throwable t) {
+                mensajeToastLong("ERROR -> " +   t.getMessage());
             }
         });
     }

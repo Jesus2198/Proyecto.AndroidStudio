@@ -18,6 +18,37 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idCrudLibroTxtFiltrar"
+        android:layout_margin="5dp"
+        android:padding="4dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filtrar"
+        android:id="@+id/idCrudLibroBtnFiltrar"
+        android:layout_margin="5dp"
+        android:padding="4dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        android:id="@+id/idCrudLibroBtnRegistrar"
+        android:layout_margin="5dp"
+        android:padding="4dp"/>
+
+    <ListView
+        android:id="@+id/idCrudLibroListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:padding="4dp"
+
+        />
 
 
 
